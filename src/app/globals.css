@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
+/* -------------------- THEME VARIABLES -------------------- */
 :root {
-  --background: #ffffff;
+  --background: #f9fafb; /* lighter default background for light mode */
   --foreground: #171717;
+  --accent: #10b981; /* Emerald green */
+  --muted: #64748b;
+  --card: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* 🌙 DARK MODE — triggered automatically by next-themes (.dark on <html>) */
+html.dark {
+  --background: #08121a;
+  --foreground: #e2e8f0;
+  --accent: #34d399; /* lighter emerald for contrast */
+  --muted: #94a3b8;
+  --card: #0e1b25;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* -------------------- BASE STYLES -------------------- */
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* -------------------- UTILITY STYLES -------------------- */
+.card {
+  background: var(--card);
+  transition: background-color 0.3s ease;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--foreground);
+  transition: all 0.3s ease;
+}
+
+/* -------------------- OPTIONAL SYSTEM FALLBACK -------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #08121a;
+    --foreground: #e2e8f0;
+    --accent: #34d399;
+    --muted: #94a3b8;
+    --card: #0e1b25;
+  }
 }
