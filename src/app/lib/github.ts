@@ -6,6 +6,7 @@ export interface GitHubRepo {
   homepage: string | null;
   topics: string[];
   stargazers_count: number;
+  fork: boolean; // ✅ Add this line
   forks_count: number;
   language: string | null;
 }
