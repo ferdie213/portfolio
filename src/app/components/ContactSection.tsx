@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerChildren } from "../lib/animations";
-import { Mail, Phone } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -46,6 +46,11 @@ export default function ContactSection() {
         {/* Email */}
         <motion.a
           variants={fadeInUp}
+          whileHover={{
+            scale: 1.03,
+            rotate: [0, 0.5, -0.5, 0],
+            transition: { duration: 0.25 },
+          }}
           href="mailto:lutergege007@gmail.com"
           className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium transition-all duration-300"
           style={{
@@ -56,17 +61,28 @@ export default function ContactSection() {
           <Mail size={16} /> Email
         </motion.a>
 
-        {/* Phone */}
+        {/* WhatsApp (accented) */}
         <motion.a
           variants={fadeInUp}
-          href="tel:+2347036632363"
+          whileHover={{
+            scale: 1.03,
+            rotate: [0, 0.4, -0.4, 0],
+            transition: { duration: 0.25 },
+          }}
+          href="https://wa.me/2347036632363?text=Hi%20Ferdinand!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect."
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-medium border transition-all duration-300"
           style={{
             borderColor: "var(--muted)",
             color: "var(--foreground)",
+            background:
+              "linear-gradient(90deg, rgba(37,211,102,0.15), rgba(37,211,102,0.05))",
+            boxShadow:
+              "0 0 10px rgba(37,211,102,0.1), inset 0 0 4px rgba(37,211,102,0.05)",
           }}
         >
-          <Phone size={16} /> +234 703 663 2363
+          <MessageCircle size={16} /> WhatsApp
         </motion.a>
       </motion.div>
     </motion.section>

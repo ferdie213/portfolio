@@ -11,12 +11,7 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
 export default function PortfolioPage() {
-  const [dark] = React.useState(true);
   const [sidebarHovered, setSidebarHovered] = React.useState(false);
-
-  React.useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-  }, [dark]);
 
   return (
     <main
