@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Head from "next/head";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -14,7 +15,13 @@ export default function PortfolioPage() {
   const [sidebarHovered, setSidebarHovered] = React.useState(false);
 
   return (
-    <main
+    <>
+     <Head>
+        <title>Ferdinand Gege - Fullstack Dev</title>
+        <meta name="description" content="My Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main
       className="min-h-screen flex transition-colors duration-500 relative overflow-hidden"
       style={{
         backgroundColor: "var(--background)",
@@ -42,5 +49,6 @@ export default function PortfolioPage() {
         <Footer />
       </div>
     </main>
+    </> 
   );
 }
