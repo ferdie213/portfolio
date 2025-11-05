@@ -3,8 +3,11 @@ import "./globals.css";
 import ThemeProvider from "./providers/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Ferdinand Gege",
+  title: "Ferdinand Gege - Fullstack Dev",
   description: "Showcase of my work",
+  icons: {
+    icon: "/favicon.ico", // path to your favicon
+  },
 };
 
 export default function RootLayout({
