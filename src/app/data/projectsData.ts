@@ -34,15 +34,25 @@ export const projects: Project[] = [
     image: "/images/nextlify.png",
     url: "https://nextlify-beta.vercel.app/",
   },
+
   {
-    id: "cinemate",
-    title: "CineMate — Watch Together",
+    id: "estyz-fitz",
+    title: "Estyz-Fitz — Stay Stylish",
     summary:
-      "A synchronized movie-sharing platform for long-distance couples and communities with live chat.",
-    tags: ["WebRTC", "Socket.IO", "Next.js", "UI/UX"],
-    image: "/images/cinemate.jpg",
-    url: "https://nextlify-beta.vercel.app/",
+      "An e-commerce website",
+    tags: ["React", "Tailwind", "Typescript", "Next.js", "UI/UX", "Payments", "Vercel", ],
+    image: "/images/estyz-fitz.png",
+    url: "https://estyz-fitz.vercel.app/",
   },
+  // {
+  //   id: "cinemate",
+  //   title: "CineMate — Watch Together",
+  //   summary:
+  //     "A synchronized movie-sharing platform for long-distance couples and communities with live chat.",
+  //   tags: ["WebRTC", "Socket.IO", "Next.js", "UI/UX"],
+  //   image: "/images/cinemate.jpg",
+  //   url: "https://nextlify-beta.vercel.app/",
+  // },
   {
     id: "indieafrique",
     title: "IndieAfrique — Community Platform",
@@ -50,6 +60,6 @@ export const projects: Project[] = [
       "An online Radio platform for African indie creators — deployment, modern frontend stacks, and growth tooling.",
     tags: ["Next.js", "Vercel", "CI/CD"],
     image: "/images/indieafrique.png",
-    url: "https://indie-afrique.vercel.app/",
+    url: "https://indieafrique.com/",
   },
 ];
